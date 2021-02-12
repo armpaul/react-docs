@@ -1,5 +1,6 @@
 import React from 'react';
 import Mapper from './components/Mapper';
+import { TopComponent } from './codes/common';
 import {
   fillColor,
   inArrayFillColor,
@@ -18,14 +19,6 @@ const Colors = {
     controls: { hideNoControlsWarning: true },
   },
 };
-
-// Component
-const TopComponent = (title, Content) => (
-  <div className="top_container">
-    <h1 className="title">{title}</h1>
-    <div className="top_content">{Content}</div>
-  </div>
-);
 
 // 1 => FillColor
 export const FillColor = () => (
