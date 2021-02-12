@@ -1,0 +1,70 @@
+{
+  "name": "react-img-mapper-docs",
+  "version": "1.0.0",
+  "description": "Documentation of React Img Mapper",
+  "keywords": [
+    "react",
+    "react-img-mapper",
+    "react-image-mapper",
+    "img-mapper",
+    "image-mapper",
+    "img mapper",
+    "image mapper",
+    "docs react img mapper",
+    "react img mapper docs",
+    "docs react image mapper",
+    "react image mapper docs"
+  ],
+  "homepage": "https://react-img-mapper.github.io/docs",
+  "bugs": {
+    "url": "https://github.com/react-img-mapper/docs/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/react-img-mapper/docs.git"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "build-storybook",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d storybook-static",
+    "start": "start-storybook -p 3000"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dependencies": {
+    "@storybook/addon-actions": "^6.1.17",
+    "@storybook/addon-essentials": "^6.1.17",
+    "@storybook/addon-links": "^6.1.17",
+    "@storybook/addons": "^6.1.17",
+    "@storybook/api": "^6.1.17",
+    "@storybook/components": "^6.1.17",
+    "@storybook/preset-scss": "^1.0.3",
+    "@storybook/react": "^6.1.15",
+    "prop-types": "^15.7.2",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-fast-compare": "^3.2.0",
+    "react-img-mapper": "^0.4.4",
+    "react-syntax-highlighter": "^15.4.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "css-loader": "^5.0.1",
+    "gh-pages": "^3.1.0",
+    "prettier": "^2.2.1",
+    "sass": "^1.32.5",
+    "sass-loader": "^10.1.1",
+    "style-loader": "^2.0.0"
+  }
+}

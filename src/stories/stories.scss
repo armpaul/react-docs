@@ -1,0 +1,31 @@
+:root {
+    --tag: #1b1f230d;
+}
+
+body {
+    font-family: Ubuntu, "Nunito Sans", -apple-system, ".SFNSText-Regular", "San Francisco", BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+p {
+    margin: 0;
+}
+
+.top_container {
+    margin-bottom: 2rem;
+
+    .title {
+
+    }
+
+    .tag {
+        padding: .2em .4em;
+        margin: 0;
+        font-size: 85%;
+        background-color: var(--tag);
+        border-radius: 6px;
+    }
+
+    .top_content {
+        line-height: 1.5;
+    }
+}
