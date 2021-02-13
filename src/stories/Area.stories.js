@@ -123,9 +123,10 @@ export const ClearSelectedHighlightedArea = args => {
         TopComponent(
           'Stay Selected Highlighted Area Example',
           <p>
-            You can clear the <span className="tag">single/multiple</span> selected highlighted area by calling{' '}
-            <span className="tag">myRef.current.clearHighlightedArea()</span>, you can press the
-            below button to see the <span className="tag">live</span> results in image mapper
+            You can clear the <span className="tag">single/multiple</span> selected highlighted area
+            by calling <span className="tag">myRef.current.clearHighlightedArea()</span>, you can
+            press the below button to see the <span className="tag">live</span> results in image
+            mapper
             <br />
             <br />
             <button type="button" onClick={callingMe}>
@@ -152,15 +153,16 @@ export const ToggleStayHighlightedArea = args => (
       TopComponent(
         'Toggle Stay Highlighted Area Example',
         <p>
-          <span className="tag">toggleHighlighted</span> field will help to toggle{' '}
-          <span className="tag">highlighting</span> feature in the image mapper
+          In this example, a new feature of <span className="tag">toggleHighlighted</span> property
+          is added which will be used to <span className="tag">toggle</span> freezed highlighted
+          area.
           <br />
           <br />
-          In this example, <span className="tag">stayHighlighted</span>,{' '}
-          <span className="tag">stayMultiHighlighted</span> and{' '}
-          <span className="tag">toggleHighlighted</span>field is available in storybook
-          <span className="tag">controls tab</span>, you can change it and see the{' '}
-          <span className="tag">live</span> results in image mapper
+          <span className="block">
+            Note: <span className="tag">toggleHighlighted</span> property will work only if one of
+            the <span className="tag">stayHighlighted</span> or{' '}
+            <span className="tag">stayMultiHighlighted</span> is true.
+          </span>
         </p>
       )
     }

@@ -24,9 +24,12 @@ const DynamicMapper = props => {
         <h1 className="title">Dynamic All Properties Example</h1>
         <div className="top_content">
           <p>
-            In this example, all fields available in storybook
-            <span className="tag">controls tab</span>, you can change it and see the{' '}
-            <span className="tag">live</span> results in image mapper
+            In this example, I have tried to merge all the{' '}
+            <span className="tag">functionalities</span> that I have created till{' '}
+            <span className="tag">now</span>.
+            <br />
+            <br />
+            <span className="block">So just play with it and have fun 🤪</span>
           </p>
         </div>
       </div>
