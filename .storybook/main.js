@@ -3,7 +3,12 @@ module.exports = {
   addons: [
     '@storybook/preset-scss',
     '@storybook/addon-links',
-    '@storybook/addon-essentials',
+    {
+      name: '@storybook/addon-essentials',
+      options: {
+        docs: false,
+      },
+    },
     './code-addon/register.js',
   ],
 };

@@ -7,9 +7,4 @@ export const parameters = {
       order: ['Examples', ['Simple', 'Colors', 'Area', 'Responsive Map', 'Dynamic All Properties']],
     },
   },
-  previewTabs: {
-    'storybook/docs/panel': {
-      hidden: true,
-    },
-  },
 };
