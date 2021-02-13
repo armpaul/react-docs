@@ -25,13 +25,10 @@ export const ShowHighlightedArea = args => (
       TopComponent(
         'Show Highlighted Area Example',
         <p>
-          <span className="tag">active</span> field will help to hide/unhide{' '}
-          <span className="tag">highlighting</span> feature in the image mapper
-          <br />
-          <br />
-          In this example, <span className="tag">active</span> field is available in storybook
-          <span className="tag">controls tab</span>, you can change it and see the{' '}
-          <span className="tag">live</span> results in image mapper
+          In this example, you have access to the storybook <span className="tag">control tab</span>{' '}
+          to dynamically choose if you wish to <span className="tag">hide/see</span> the highlight
+          area according to your preference with the help of <span className="tag">active</span>{' '}
+          toggle button.
         </p>
       )
     }
@@ -58,15 +55,11 @@ export const StaySelectedHighlightedArea = args => (
       TopComponent(
         'Stay Selected Highlighted Area Example',
         <p>
-          <span className="tag">stayHighlighted</span> field will help{' '}
-          <span className="tag">selected area</span> to stay
-          <span className="tag">highlighted</span> in the image mapper
-          <br />
-          <br />
-          In this example, <span className="tag">stayHighlighted</span> field is available in
-          storybook
-          <span className="tag">controls tab</span>, you can change it and see the{' '}
-          <span className="tag">live</span> results in image mapper
+          In this example, if you set the storybook <span className="tag">control tabs</span> -{' '}
+          <span className="tag">stayHighlighted</span> to true, you can{' '}
+          <span className="tag">freeze</span> the <span className="tag">area</span> you want to keep
+          <span className="tag">highlighted</span>, just by clicking and you can still be able to
+          highlight the <span className="tag">remaining</span> area on hover.
         </p>
       )
     }
@@ -93,14 +86,9 @@ export const StayMultipleSelectedHighlightedArea = args => (
       TopComponent(
         'Stay Multiple Selected Highlighted Area Example',
         <p>
-          <span className="tag">stayMultiHighlighted</span> is same as{' '}
-          <span className="tag">stayHighlighted</span> but with multiple highlighting
-          <br />
-          <br />
-          In this example, <span className="tag">stayMultiHighlighted</span> field is available in
-          storybook
-          <span className="tag">controls tab</span>, you can change it and see the{' '}
-          <span className="tag">live</span> results in image mapper
+          This example is similar to <span className="tag">stayHighlighted</span> property, the only
+          additional feature is you can freeze <span className="tag">multiple</span> highlighted
+          areas.
         </p>
       )
     }
@@ -135,7 +123,7 @@ export const ClearSelectedHighlightedArea = args => {
         TopComponent(
           'Stay Selected Highlighted Area Example',
           <p>
-            You can clear the single/multiple selected highlighted area field by calling{' '}
+            You can clear the <span className="tag">single/multiple</span> selected highlighted area by calling{' '}
             <span className="tag">myRef.current.clearHighlightedArea()</span>, you can press the
             below button to see the <span className="tag">live</span> results in image mapper
             <br />
