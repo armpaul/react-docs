@@ -4,8 +4,7 @@ export const showHighlightedArea = common(`(
     <ImageMapper 
       src={URL} 
       map={MAP}
-      // dynamic active
-      active={props.active}
+      active={props.active} // dynamic active
    />
   )`);
 
@@ -13,8 +12,7 @@ export const staySelectedHighlightedArea = common(`(
     <ImageMapper 
       src={URL} 
       map={MAP}
-      // dynamic stayHighlighted
-      stayHighlighted={props.stayHighlighted}
+      stayHighlighted={props.stayHighlighted} // dynamic stayHighlighted
    />
   )`);
 
@@ -22,8 +20,7 @@ export const stayMultipleSelectedHighlightedArea = common(`(
     <ImageMapper 
       src={URL} 
       map={MAP}
-      // dynamic stayHighlighted
-      stayMultiHighlighted={props.stayMultiHighlighted}
+      stayMultiHighlighted={props.stayMultiHighlighted} // dynamic stayHighlighted
    />
   )`);
 
@@ -33,11 +30,8 @@ export const toggleStayHighlightedArea = common(`(
     <ImageMapper 
       src={URL} 
       map={MAP}
-      // dynamic stayHighlighted
-      stayHighlighted={props.stayHighlighted}
-      // dynamic stayMultiHighlighted
-      stayMultiHighlighted={props.stayMultiHighlighted}
-      // dynamic toggleHighlighted
-      toggleHighlighted={props.toggleHighlighted}
+      stayHighlighted={props.stayHighlighted} // dynamic stayHighlighted
+      stayMultiHighlighted={props.stayMultiHighlighted} // dynamic stayMultiHighlighted
+      toggleHighlighted={props.toggleHighlighted} // dynamic toggleHighlighted
    />
   )`);

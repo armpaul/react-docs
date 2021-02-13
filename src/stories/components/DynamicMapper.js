@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import ImageMapper from 'react-img-mapper';
 import URL from '../../assets/example.jpg';
@@ -18,7 +18,21 @@ const DynamicMapper = props => {
     }),
   };
 
-  return <ImageMapper src={URL} map={MAP} {...props} />;
+  return (
+    <Fragment>
+      <div className="top_container">
+        <h1 className="title">Dynamic All Properties Example</h1>
+        <div className="top_content">
+          <p>
+            In this example, all fields available in storybook
+            <span className="tag">controls tab</span>, you can change it and see the{' '}
+            <span className="tag">live</span> results in image mapper
+          </p>
+        </div>
+      </div>
+      <ImageMapper src={URL} map={MAP} {...props} />
+    </Fragment>
+  );
 };
 
 DynamicMapper.defaultProps = {
@@ -31,6 +45,8 @@ DynamicMapper.defaultProps = {
   natural: false,
   imgWidth: 0,
   stayHighlighted: false,
+  stayMultiHighlighted: false,
+  toggleHighlighted: false,
   parentWidth: 640,
   responsive: false,
 };
@@ -45,6 +61,8 @@ DynamicMapper.propTypes = {
   strokeColor: PropTypes.string,
   natural: PropTypes.bool,
   stayHighlighted: PropTypes.bool,
+  stayMultiHighlighted: PropTypes.bool,
+  toggleHighlighted: PropTypes.bool,
   parentWidth: PropTypes.number,
   responsive: PropTypes.bool,
 };

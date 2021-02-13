@@ -8,8 +8,7 @@ export const dynamicFillColor = common(`(
     <ImageMapper 
       src={URL} 
       map={MAP}
-      // dynamic fill color
-      fillColor={props.fillColor}
+      fillColor={props.fillColor} // dynamic fill color
    />
   )`);
 
@@ -17,8 +16,7 @@ export const dynamicMixArrayFillColor = common(`(
     <ImageMapper 
       src={URL} 
       map={MAP}
-      // dynamic fill color
-      fillColor={props.fillColor}
+      fillColor={props.fillColor} // dynamic fill color
    />
   )`);
 
@@ -42,10 +40,8 @@ export const dynamicStrokeColor = common(`(
     <ImageMapper 
       src={URL} 
       map={MAP}
-      // dynamic stroke color
-      strokeColor={props.strokeColor}
-      // dynamic stroke line width
-      lineWidth={props.lineWidth}
+      strokeColor={props.strokeColor} // dynamic stroke color
+      lineWidth={props.lineWidth} // dynamic stroke line width
    />
   )`);
 
@@ -53,9 +49,7 @@ export const dynamicMixArrayStrokeColor = common(`(
     <ImageMapper 
       src={URL} 
       map={MAP}
-      // dynamic stroke color
-      strokeColor={props.strokeColor}
-      // dynamic stroke line width
-      lineWidth={props.lineWidth}
+      strokeColor={props.strokeColor} // dynamic stroke color
+      lineWidth={props.lineWidth} // dynamic stroke line width
    />
   )`);

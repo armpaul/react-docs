@@ -170,7 +170,7 @@ export const ToggleStayHighlightedArea = args => (
           <br />
           In this example, <span className="tag">stayHighlighted</span>,{' '}
           <span className="tag">stayMultiHighlighted</span> and{' '}
-          <span className="tag">and toggleHighlighted</span>field is available in storybook
+          <span className="tag">toggleHighlighted</span>field is available in storybook
           <span className="tag">controls tab</span>, you can change it and see the{' '}
           <span className="tag">live</span> results in image mapper
         </p>

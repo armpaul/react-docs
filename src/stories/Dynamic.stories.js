@@ -1,5 +1,6 @@
 import React from 'react';
 import DynamicMapper from './components/DynamicMapper';
+import { dynamicAllProperties } from './codes/dynamic';
 
 const Dynamic = {
   title: 'Examples/Dynamic All Properties',
@@ -17,5 +18,9 @@ const Dynamic = {
 };
 
 export const DynamicAllProperties = args => <DynamicMapper {...args} />;
+
+DynamicAllProperties.parameters = {
+  code: dynamicAllProperties,
+};
 
 export default Dynamic;
