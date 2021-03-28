@@ -3,6 +3,7 @@ import Mapper from './components/Mapper';
 import { TopComponent } from './codes/common';
 import {
   showHighlightedArea,
+  inArrayShowHighlightedArea,
   staySelectedHighlightedArea,
   stayMultipleSelectedHighlightedArea,
   clearSelectedHighlightedArea,
@@ -47,7 +48,36 @@ ShowHighlightedArea.argTypes = {
   active: { control: 'boolean' },
 };
 
-// 2 => StaySelectedHighlightedArea
+export const InArrayShowHighlightedArea = () => (
+  <Mapper
+    customType="active"
+    customJSON={2}
+    TopComponent={() =>
+      TopComponent(
+        'Show Highlighted Area Example Based on Area JSON',
+        <p>
+          in case, if we want to <span className="tag">exclude</span> an{' '}
+          <span className="tag">active</span> area of an image from the{' '}
+          <span className="tag">whole</span> image. For example, here we have excluded the{' '}
+          <span className="tag">window</span> and <span className="tag">refrigerator</span>{' '}
+          <span className="tag">areas</span>
+          <br />
+          <br />
+          <span className="block">
+            Note: default is <span className="tag">true</span> for{' '}
+            <span className="tag">active</span> property for the remaining area
+          </span>
+        </p>
+      )
+    }
+  />
+);
+
+InArrayShowHighlightedArea.parameters = {
+  code: inArrayShowHighlightedArea,
+};
+
+// 3 => StaySelectedHighlightedArea
 export const StaySelectedHighlightedArea = args => (
   <Mapper
     stayHighlighted={args.stayHighlighted}
@@ -78,7 +108,7 @@ StaySelectedHighlightedArea.argTypes = {
   stayHighlighted: { control: 'boolean' },
 };
 
-// 3 => StayMultipleSelectedHighlightedArea
+// 4 => StayMultipleSelectedHighlightedArea
 export const StayMultipleSelectedHighlightedArea = args => (
   <Mapper
     stayMultiHighlighted={args.stayMultiHighlighted}
@@ -107,7 +137,7 @@ StayMultipleSelectedHighlightedArea.argTypes = {
   stayMultiHighlighted: { control: 'boolean' },
 };
 
-// 4 => ClearMultipleSelectedHighlightedArea
+// 5 => ClearMultipleSelectedHighlightedArea
 export const ClearSelectedHighlightedArea = args => {
   const myRef = useRef(null);
 
@@ -143,7 +173,7 @@ ClearSelectedHighlightedArea.parameters = {
   code: clearSelectedHighlightedArea,
 };
 
-// 5 => ToggleStayHighlightedArea
+// 6 => ToggleStayHighlightedArea
 export const ToggleStayHighlightedArea = args => (
   <Mapper
     stayHighlighted={args.stayHighlighted}

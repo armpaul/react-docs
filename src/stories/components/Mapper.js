@@ -35,6 +35,16 @@ const Mapper = props => {
         return temp;
       });
     }
+    if (customJSON === 2) {
+      return areasJSON.map(cur => {
+        const temp = { ...cur };
+        if (['Refrigerator', 'Window'].includes(cur.title)) {
+          temp.active = false;
+          return temp;
+        }
+        return temp;
+      });
+    }
     return areasJSON;
   };
 

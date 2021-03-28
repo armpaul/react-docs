@@ -8,6 +8,8 @@ export const showHighlightedArea = common(`(
    />
   )`);
 
+export const inArrayShowHighlightedArea = common(`<ImageMapper src={URL} map={MAP} />`);
+
 export const staySelectedHighlightedArea = common(`(
     <ImageMapper 
       src={URL} 
