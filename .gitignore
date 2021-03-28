@@ -3,12 +3,13 @@
 # dependencies
 /node_modules
 /.pnp
-.pnp.js
-.idea
-package-lock.json
+/.pnp.js
+/.idea
+/storybook-static
 /lib
-.eslintcache
-storybook-static
+/.eslintcache
+/yarn.lock
+/package-lock.json
 
 # testing
 /coverage
