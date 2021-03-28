@@ -4,6 +4,8 @@ import { TopComponent } from './codes/common';
 import {
   showHighlightedArea,
   inArrayShowHighlightedArea,
+  disabledArea,
+  inArrayDisabledArea,
   staySelectedHighlightedArea,
   stayMultipleSelectedHighlightedArea,
   clearSelectedHighlightedArea,
@@ -48,6 +50,7 @@ ShowHighlightedArea.argTypes = {
   active: { control: 'boolean' },
 };
 
+// 2 => InArrayShowHighlightedArea
 export const InArrayShowHighlightedArea = () => (
   <Mapper
     customType="active"
@@ -56,7 +59,7 @@ export const InArrayShowHighlightedArea = () => (
       TopComponent(
         'Show Highlighted Area Example Based on Area JSON',
         <p>
-          in case, if we want to <span className="tag">exclude</span> an{' '}
+          in case, if we want to <span className="tag">hide/see</span> an{' '}
           <span className="tag">active</span> area of an image from the{' '}
           <span className="tag">whole</span> image. For example, here we have excluded the{' '}
           <span className="tag">window</span> and <span className="tag">refrigerator</span>{' '}
@@ -77,7 +80,66 @@ InArrayShowHighlightedArea.parameters = {
   code: inArrayShowHighlightedArea,
 };
 
-// 3 => StaySelectedHighlightedArea
+// 3 => DisabledArea
+export const DisabledArea = args => (
+  <Mapper
+    disabled={args.disabled}
+    TopComponent={() =>
+      TopComponent(
+        'Disabled Area Example',
+        <p>
+          In this example, you have access to the storybook <span className="tag">control tab</span>{' '}
+          to dynamically choose if you wish to <span className="tag">disable/enable</span> the
+          listeners and highlight area according to your preference with the help of{' '}
+          <span className="tag">disabled</span> toggle button.
+        </p>
+      )
+    }
+  />
+);
+
+DisabledArea.parameters = {
+  code: disabledArea,
+};
+
+DisabledArea.args = {
+  disabled: false,
+};
+
+DisabledArea.argTypes = {
+  disabled: { control: 'boolean' },
+};
+
+// 4 => InArrayDisabledArea
+export const InArrayDisabledArea = () => (
+  <Mapper
+    customType="disabled"
+    customJSON={2}
+    TopComponent={() =>
+      TopComponent(
+        'Disabled Area Example Based on Area JSON',
+        <p>
+          in case, if we want to <span className="tag">disable/enable</span> an area of an image
+          from the <span className="tag">whole</span> image. For example, here we have excluded the{' '}
+          <span className="tag">window</span> and <span className="tag">refrigerator</span>{' '}
+          <span className="tag">areas</span>
+          <br />
+          <br />
+          <span className="block">
+            Note: default is <span className="tag">false</span> for{' '}
+            <span className="tag">disabled</span> property for the remaining area
+          </span>
+        </p>
+      )
+    }
+  />
+);
+
+InArrayDisabledArea.parameters = {
+  code: inArrayDisabledArea,
+};
+
+// 5 => StaySelectedHighlightedArea
 export const StaySelectedHighlightedArea = args => (
   <Mapper
     stayHighlighted={args.stayHighlighted}
@@ -108,7 +170,7 @@ StaySelectedHighlightedArea.argTypes = {
   stayHighlighted: { control: 'boolean' },
 };
 
-// 4 => StayMultipleSelectedHighlightedArea
+// 6 => StayMultipleSelectedHighlightedArea
 export const StayMultipleSelectedHighlightedArea = args => (
   <Mapper
     stayMultiHighlighted={args.stayMultiHighlighted}
@@ -137,7 +199,7 @@ StayMultipleSelectedHighlightedArea.argTypes = {
   stayMultiHighlighted: { control: 'boolean' },
 };
 
-// 5 => ClearMultipleSelectedHighlightedArea
+// 7 => ClearMultipleSelectedHighlightedArea
 export const ClearSelectedHighlightedArea = args => {
   const myRef = useRef(null);
 
@@ -173,7 +235,7 @@ ClearSelectedHighlightedArea.parameters = {
   code: clearSelectedHighlightedArea,
 };
 
-// 6 => ToggleStayHighlightedArea
+// 8 => ToggleStayHighlightedArea
 export const ToggleStayHighlightedArea = args => (
   <Mapper
     stayHighlighted={args.stayHighlighted}

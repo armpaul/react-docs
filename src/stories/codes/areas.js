@@ -18,6 +18,16 @@ export const staySelectedHighlightedArea = common(`(
    />
   )`);
 
+export const disabledArea = common(`(
+    <ImageMapper 
+      src={URL} 
+      map={MAP}
+      disabled={props.disabled} // dynamic disabled
+   />
+  )`);
+
+export const inArrayDisabledArea = inArrayShowHighlightedArea;
+
 export const stayMultipleSelectedHighlightedArea = common(`(
     <ImageMapper 
       src={URL} 

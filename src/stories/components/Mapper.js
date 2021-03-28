@@ -39,7 +39,12 @@ const Mapper = props => {
       return areasJSON.map(cur => {
         const temp = { ...cur };
         if (['Refrigerator', 'Window'].includes(cur.title)) {
-          temp.active = false;
+          if (customType === 'active') {
+            temp.active = false;
+          }
+          if (customType === 'disabled') {
+            temp.disabled = true;
+          }
           return temp;
         }
         return temp;
