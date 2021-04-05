@@ -1,7 +1,7 @@
 import React from 'react';
 
 const common = code =>
-`import React from 'react';
+  `import React from 'react';
 import ImageMapper from 'react-img-mapper';
 
 const Mapper = props => {
@@ -17,8 +17,7 @@ const Mapper = props => {
 
 export default Mapper;`;
 
-export const clearButtonTemplate =
-`import React, { Fragment, useRef } from 'react';
+export const clearButtonTemplate = `import React, { Fragment, useRef } from 'react';
 import ImageMapper from 'react-img-mapper';
 
 const Mapper = props => {
@@ -37,7 +36,8 @@ const Mapper = props => {
   
   return (
     <Fragment>
-      <ImageMapper 
+      <ImageMapper
+          containerRef={myRef} 
           src={URL} 
           map={MAP}
           stayMultiHighlighted
