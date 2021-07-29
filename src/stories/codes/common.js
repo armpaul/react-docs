@@ -23,11 +23,11 @@ import ImageMapper from 'react-img-mapper';
 const Mapper = props => {
   const myRef = useRef(null);
 
-  const URL = 'https://raw.githubusercontent.com/NishargShah/react-img-mapper/master/src/assets/example.jpg';
+  const URL = 'https://raw.githubusercontent.com/img-mapper/react-docs/master/src/assets/example.jpg';
   const MAP = {
     name: 'my-map',
     // GET JSON FROM BELOW URL AS AN EXAMPLE
-    areas: 'https://raw.githubusercontent.com/NishargShah/react-img-mapper/master/src/assets/example.json',
+    areas: 'https://raw.githubusercontent.com/img-mapper/react-docs/master/src/assets/example.json',
   };
   
   const handleClear = () => {
