@@ -281,11 +281,11 @@ ToggleStayHighlightedArea.argTypes = {
 // 9 => ZoomInZoomOutArea
 export const ZoomInZoomOutArea = args => {
   const minWidth = 400;
-  const [zoom, setZoom] = useState(minWidth);
+  const [zoom, setZoom] = useState(640);
 
   const handleZoom = type => {
     setZoom(prev => {
-      if (prev <= 400 && type === 'out') return prev;
+      if (prev <= minWidth && type === 'out') return prev;
       return type === 'in' ? prev + args.zoomWidth : prev - args.zoomWidth;
     });
   };

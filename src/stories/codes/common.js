@@ -53,14 +53,14 @@ import ImageMapper from 'react-img-mapper';
 
 const Mapper = props => {
   const minWidth = 400;
-  const [zoom, setZoom] = useState(minWidth);
+  const [zoom, setZoom] = useState(640);
 
   const URL = '${URL}';
   const MAP = ${MAP};
 
   const handleZoom = type => {
     setZoom(prev => {
-      if (prev <= 400 && type === 'out') return prev;
+      if (prev <= minWidth && type === 'out') return prev;
       return type === 'in' ? prev + props.zoomWidth : prev - props.zoomWidth;
     });
   };
