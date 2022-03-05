@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import Mapper from './components/Mapper';
 import { TopComponent } from './codes/common';
 import {
@@ -10,6 +10,7 @@ import {
   stayMultipleSelectedHighlightedArea,
   clearSelectedHighlightedArea,
   toggleStayHighlightedArea,
+  zoomInZoomOutArea,
 } from './codes/areas';
 
 const Area = {
@@ -275,6 +276,56 @@ ToggleStayHighlightedArea.argTypes = {
   stayHighlighted: { control: 'boolean' },
   stayMultiHighlighted: { control: 'boolean' },
   toggleHighlighted: { control: 'boolean' },
+};
+
+// 9 => ZoomInZoomOutArea
+export const ZoomInZoomOutArea = args => {
+  const minWidth = 400;
+  const [zoom, setZoom] = useState(minWidth);
+
+  const handleZoom = type => {
+    setZoom(prev => {
+      if (prev <= 400 && type === 'out') return prev;
+      return type === 'in' ? prev + args.zoomWidth : prev - args.zoomWidth;
+    });
+  };
+
+  return (
+    <Mapper
+      responsive
+      parentWidth={zoom}
+      TopComponent={() =>
+        TopComponent(
+          'Zoom In & Zoom Out Area',
+          <p>
+            In this example, Zoom is based on the <span className="tag">zoomWidth</span> that you
+            can change by the <span className="tag">control tab</span>, you can press the below
+            buttons to see the <span className="tag">live</span> results in image mapper
+            <br />
+            <br />
+            <button style={{ marginRight: 8 }} type="button" onClick={() => handleZoom('in')}>
+              Zoom In
+            </button>
+            <button type="button" onClick={() => handleZoom('out')}>
+              Zoom Out
+            </button>
+          </p>
+        )
+      }
+    />
+  );
+};
+
+ZoomInZoomOutArea.parameters = {
+  code: zoomInZoomOutArea,
+};
+
+ZoomInZoomOutArea.args = {
+  zoomWidth: 100,
+};
+
+ZoomInZoomOutArea.argTypes = {
+  zoomWidth: { control: 'number' },
 };
 
 export default Area;

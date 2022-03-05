@@ -1,4 +1,4 @@
-import common, { clearButtonTemplate } from './common';
+import common, { clearButtonTemplate, zoomTemplate } from './common';
 
 export const showHighlightedArea = common(`(
     <ImageMapper 
@@ -47,3 +47,5 @@ export const toggleStayHighlightedArea = common(`(
       toggleHighlighted={props.toggleHighlighted} // dynamic toggleHighlighted
    />
   )`);
+
+export const zoomInZoomOutArea = zoomTemplate;
