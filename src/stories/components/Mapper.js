@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import ImageMapper from 'react-img-mapper';
-import URL from '../../assets/example.jpg';
-import areasJSON from '../../assets/example.json';
+import URL from '../../assets/zooZone1.jpg';
+import areasJSON from '../../assets/zooZone1.json';
 
 const Mapper = props => {
   const { customJSON, customType, TopComponent, BottomComponent } = props;
