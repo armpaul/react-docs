@@ -225,7 +225,7 @@ var ImageMapper = function (props) {
         if (onClick) {
             alert('::'+area.title); //記得刪除
             event.preventDefault();
-            location.href = 'http://localhost:8000/?' + area.title;
+            location.href = 'http://localhost:8000/ToTheZone/?' + area.title;
             onClick(area, index, event);
         }
     };
